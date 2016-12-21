@@ -5,7 +5,8 @@ lazy val commonSettings = Seq(
 )
 
 lazy val serverSettings = Seq(
-  libraryDependencies ++= Seq( jdbc , cache , ws   , specs2 % Test ),
+  libraryDependencies ++= Seq( jdbc , cache , ws   , specs2 % Test,
+    "org.sameersingh.scalaplot" % "scalaplot" % "0.0.4"),
   unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" ),
   resolvers += "scalaz-bintray" at "https://dl.bintray.com/scalaz/releases"
 )
