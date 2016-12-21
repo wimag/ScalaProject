@@ -2980,12 +2980,22 @@ $h_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$.prototype = $c_Lcom_karasiq
 $c_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$.prototype.init___ = (function() {
   return this
 });
+$c_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$.prototype.staticTop__Lcom_karasiq_bootstrap_navbar_NavigationBarStyle = (function() {
+  return (((16 & this.bitmap$0$1) === 0) ? this.staticTop$lzycompute__p1__Lcom_karasiq_bootstrap_navbar_NavigationBarStyle() : this.staticTop$1)
+});
 $c_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$.prototype.fixedTop$lzycompute__p1__Lcom_karasiq_bootstrap_navbar_NavigationBarStyle = (function() {
   if (((4 & this.bitmap$0$1) === 0)) {
     this.fixedTop$1 = new $c_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle().init___T("fixed-top");
     this.bitmap$0$1 = (4 | this.bitmap$0$1)
   };
   return this.fixedTop$1
+});
+$c_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$.prototype.staticTop$lzycompute__p1__Lcom_karasiq_bootstrap_navbar_NavigationBarStyle = (function() {
+  if (((16 & this.bitmap$0$1) === 0)) {
+    this.staticTop$1 = new $c_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle().init___T("static-top");
+    this.bitmap$0$1 = (16 | this.bitmap$0$1)
+  };
+  return this.staticTop$1
 });
 $c_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$.prototype.inverse$lzycompute__p1__Lcom_karasiq_bootstrap_navbar_NavigationBarStyle = (function() {
   if (((2 & this.bitmap$0$1) === 0)) {
@@ -3725,6 +3735,13 @@ $c_jl_System$.prototype.init___ = (function() {
   };
   this.getHighPrecisionTime$1 = jsx$1;
   return this
+});
+$c_jl_System$.prototype.currentTimeMillis__J = (function() {
+  var this$1 = $m_sjsr_RuntimeLong$();
+  var value = $uD(new $g.Date().getTime());
+  var lo = this$1.scala$scalajs$runtime$RuntimeLong$$fromDoubleImpl__D__I(value);
+  var hi = this$1.scala$scalajs$runtime$RuntimeLong$$hiReturn$f;
+  return new $c_sjsr_RuntimeLong().init___I__I(lo, hi)
 });
 var $d_jl_System$ = new $TypeData().initClass({
   jl_System$: 0
@@ -5995,42 +6012,42 @@ $c_Lru_spbau_mit_frontend_Comparer.prototype.init___Lrx_Ctx$Owner = (function(ct
 });
 $c_Lru_spbau_mit_frontend_Comparer.prototype.render__sc_Seq__Lscalatags_generic_Modifier = (function(md) {
   var firstText = new $c_Lrx_Var().init___O("First word");
-  var secondText = new $c_Lrx_Var().init___O("First word");
-  var this$4 = $m_Lcom_karasiq_bootstrap_form_FormInput$();
+  var secondText = new $c_Lrx_Var().init___O("Second word");
+  var picText = new $c_Lrx_Var().init___O("https://i.ytimg.com/vi/HCQ3hdYGhC0/hqdefault.jpg");
+  var this$5 = $m_Lcom_karasiq_bootstrap_form_FormInput$();
   var label = $m_Lscalatags_JsDom$all$().placeholder__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("First word", $m_Lscalatags_JsDom$all$().stringAttr$1);
   var ctx = this.ctx$1;
   var md$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lcom_karasiq_bootstrap_BootstrapImplicits$RxInputOps().init___Lrx_Var__Lrx_Ctx$Owner(firstText, ctx).reactiveInput__Lscalatags_generic_Modifier()]);
-  var firstWordInput = this$4.ofType__T__Lscalatags_generic_Modifier__sc_Seq__Lscalatags_JsDom$TypedTag("text", label, md$1).render__Lorg_scalajs_dom_raw_Element();
-  var this$6 = $m_Lcom_karasiq_bootstrap_form_FormInput$();
+  var firstWordInput = this$5.ofType__T__Lscalatags_generic_Modifier__sc_Seq__Lscalatags_JsDom$TypedTag("text", label, md$1).render__Lorg_scalajs_dom_raw_Element();
+  var this$7 = $m_Lcom_karasiq_bootstrap_form_FormInput$();
   var label$1 = $m_Lscalatags_JsDom$all$().placeholder__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("Second word", $m_Lscalatags_JsDom$all$().stringAttr$1);
   var ctx$1 = this.ctx$1;
   var md$2 = new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lcom_karasiq_bootstrap_BootstrapImplicits$RxInputOps().init___Lrx_Var__Lrx_Ctx$Owner(secondText, ctx$1).reactiveInput__Lscalatags_generic_Modifier()]);
-  var secondWordInput = this$6.ofType__T__Lscalatags_generic_Modifier__sc_Seq__Lscalatags_JsDom$TypedTag("text", label$1, md$2).render__Lorg_scalajs_dom_raw_Element();
+  var secondWordInput = this$7.ofType__T__Lscalatags_generic_Modifier__sc_Seq__Lscalatags_JsDom$TypedTag("text", label$1, md$2).render__Lorg_scalajs_dom_raw_Element();
   var style = $m_Lcom_karasiq_bootstrap_buttons_ButtonStyle$().success__Lcom_karasiq_bootstrap_buttons_ButtonStyle();
   var size = $m_Lcom_karasiq_bootstrap_buttons_DefaultButtonSize$();
   var bc = new $c_Lcom_karasiq_bootstrap_buttons_ButtonBuilder().init___Lcom_karasiq_bootstrap_buttons_ButtonStyle__Lcom_karasiq_bootstrap_buttons_ButtonSize__Z__Z__Z(style, size, false, false, false);
   var jsx$4 = bc.renderTag__sc_Seq__Lscalatags_JsDom$TypedTag($m_sci_Nil$());
   $m_Lscalatags_JsDom$all$();
-  var jsx$3 = new $c_Lscalatags_JsDom$StringFrag().init___T("Win 10000000$");
+  var jsx$3 = new $c_Lscalatags_JsDom$StringFrag().init___T("Plot");
   var jsx$2 = $m_Lscalatags_JsDom$all$().onclick__Lscalatags_generic_Attr();
-  var jsx$1 = $m_Lcom_karasiq_bootstrap_Bootstrap$().jsClick__F1__sjs_js_Function(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(firstText$1, secondText$1) {
-    return (function(x$1$2) {
-      var x = (($as_T(firstText$1.Internal__Lrx_Var$Internal$().value$1) + " ") + secondText$1.Internal__Lrx_Var$Internal$().value$1);
-      var this$13 = $m_s_Console$();
-      var this$14 = $as_Ljava_io_PrintStream(this$13.outVar$2.v$1);
-      this$14.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"))
-    })
-  })(firstText, secondText)));
-  var this$15 = $m_Lscalatags_JsDom$all$();
+  var jsx$1 = $m_Lcom_karasiq_bootstrap_Bootstrap$().jsClick__F1__sjs_js_Function(new $c_Lru_spbau_mit_frontend_Comparer$$anonfun$1().init___Lru_spbau_mit_frontend_Comparer__Lrx_Var__Lrx_Var__Lrx_Var(this, firstText, secondText, picText));
+  var this$13 = $m_Lscalatags_JsDom$all$();
   var ev = $m_s_Predef$().singleton$und$less$colon$less$2;
-  var successButton = jsx$4.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, jsx$2.$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(jsx$1, new $c_Lscalatags_LowPriorityImplicits$$anon$2().init___Lscalatags_LowPriorityImplicits__F1(this$15, ev))])).render__Lorg_scalajs_dom_raw_Element();
-  var jsx$7 = $m_Lcom_karasiq_bootstrap_form_Form$();
+  var successButton = jsx$4.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$3, jsx$2.$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair(jsx$1, new $c_Lscalatags_LowPriorityImplicits$$anon$2().init___Lscalatags_LowPriorityImplicits__F1(this$13, ev))])).render__Lorg_scalajs_dom_raw_Element();
+  var jsx$6 = $m_Lcom_karasiq_bootstrap_grid_GridSystem$();
+  var jsx$5 = $m_Lcom_karasiq_bootstrap_carousel_Carousel$();
+  var ctx$2 = this.ctx$1;
+  var pic = jsx$6.mkRow__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$5.slide__T__sc_Seq__Lscalatags_generic_Modifier("", new $c_sjs_js_WrappedArray().init___sjs_js_Array([new $c_Lcom_karasiq_bootstrap_BootstrapImplicits$RxInputOps().init___Lrx_Var__Lrx_Ctx$Owner(picText, ctx$2).reactiveInput__Lscalatags_generic_Modifier()]))])).render__Lorg_scalajs_dom_raw_Element();
+  var jsx$10 = $m_Lcom_karasiq_bootstrap_form_Form$();
+  var this$15 = $m_Lscalatags_JsDom$all$();
+  var jsx$9 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$15, firstWordInput);
   var this$16 = $m_Lscalatags_JsDom$all$();
-  var jsx$6 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$16, firstWordInput);
+  var jsx$8 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$16, secondWordInput);
   var this$17 = $m_Lscalatags_JsDom$all$();
-  var jsx$5 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$17, secondWordInput);
+  var jsx$7 = new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$17, successButton);
   var this$18 = $m_Lscalatags_JsDom$all$();
-  var res = jsx$7.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$6, jsx$5, new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$18, successButton), $m_Lcom_karasiq_bootstrap_grid_GridSystem$().mkRow__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcom_karasiq_bootstrap_carousel_Carousel$().slide__T__sc_Seq__Lscalatags_generic_Modifier("data:image/png;base64,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", new $c_sjs_js_WrappedArray().init___sjs_js_Array([]))]))]));
+  var res = jsx$10.apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([jsx$9, jsx$8, jsx$7, new $c_Lscalatags_LowPriorityImplicits$bindNode().init___Lscalatags_LowPriorityImplicits__Lorg_scalajs_dom_raw_Node(this$18, pic)]));
   return res
 });
 var $d_Lru_spbau_mit_frontend_Comparer = new $TypeData().initClass({
@@ -11194,6 +11211,71 @@ var $d_Lcom_karasiq_bootstrap_navbar_NavigationTab = new $TypeData().initClass({
 });
 $c_Lcom_karasiq_bootstrap_navbar_NavigationTab.prototype.$classData = $d_Lcom_karasiq_bootstrap_navbar_NavigationTab;
 /** @constructor */
+function $c_Lru_spbau_mit_frontend_Comparer$$anonfun$1() {
+  $c_sr_AbstractFunction1.call(this);
+  this.firstText$1$2 = null;
+  this.secondText$1$2 = null;
+  this.picText$1$f = null
+}
+$c_Lru_spbau_mit_frontend_Comparer$$anonfun$1.prototype = new $h_sr_AbstractFunction1();
+$c_Lru_spbau_mit_frontend_Comparer$$anonfun$1.prototype.constructor = $c_Lru_spbau_mit_frontend_Comparer$$anonfun$1;
+/** @constructor */
+function $h_Lru_spbau_mit_frontend_Comparer$$anonfun$1() {
+  /*<skip>*/
+}
+$h_Lru_spbau_mit_frontend_Comparer$$anonfun$1.prototype = $c_Lru_spbau_mit_frontend_Comparer$$anonfun$1.prototype;
+$c_Lru_spbau_mit_frontend_Comparer$$anonfun$1.prototype.apply__O__O = (function(v1) {
+  this.apply__Lorg_scalajs_dom_raw_Element__V(v1)
+});
+$c_Lru_spbau_mit_frontend_Comparer$$anonfun$1.prototype.init___Lru_spbau_mit_frontend_Comparer__Lrx_Var__Lrx_Var__Lrx_Var = (function($$outer, firstText$1, secondText$1, picText$1) {
+  this.firstText$1$2 = firstText$1;
+  this.secondText$1$2 = secondText$1;
+  this.picText$1$f = picText$1;
+  return this
+});
+$c_Lru_spbau_mit_frontend_Comparer$$anonfun$1.prototype.apply__Lorg_scalajs_dom_raw_Element__V = (function(x$1) {
+  var this$1 = this.firstText$1$2;
+  var subj1 = $as_T(this$1.Internal__Lrx_Var$Internal$().value$1);
+  var this$2 = this.secondText$1$2;
+  var subj2 = $as_T(this$2.Internal__Lrx_Var$Internal$().value$1);
+  var t = $m_jl_System$().currentTimeMillis__J();
+  var lo = t.lo$2;
+  var hi = t.hi$2;
+  var this$3 = $m_sjsr_RuntimeLong$();
+  var lo$1 = this$3.divideImpl__I__I__I__I__I(lo, hi, 1000, 0);
+  var hi$1 = this$3.scala$scalajs$runtime$RuntimeLong$$hiReturn$f;
+  var lo$2 = (((-300) + lo$1) | 0);
+  var hi$2 = ((((-2147483648) ^ lo$2) < 2147483348) ? hi$1 : (((-1) + hi$1) | 0));
+  var url = new $c_s_StringContext().init___sc_Seq(new $c_sjs_js_WrappedArray().init___sjs_js_Array(["http://127.0.0.1:9000/stats?first=", "&second=", "&from=", "&to=", ""])).s__sc_Seq__T(new $c_sjs_js_WrappedArray().init___sjs_js_Array([subj1, subj2, new $c_sjsr_RuntimeLong().init___I__I(lo$2, hi$2), new $c_sjsr_RuntimeLong().init___I__I(lo$1, hi$1)]));
+  var xhr = new $g.XMLHttpRequest();
+  xhr.open("GET", url);
+  xhr.onload = (function(arg$outer, xhr$1) {
+    return (function(e$2) {
+      if (($uI(xhr$1.status) === 200)) {
+        var text = $as_T(xhr$1.responseText);
+        arg$outer.picText$1$f.update__O__V(text);
+        var this$5 = arg$outer.picText$1$f;
+        var x = this$5.Internal__Lrx_Var$Internal$().value$1;
+        var this$7 = $m_s_Console$();
+        var this$8 = $as_Ljava_io_PrintStream(this$7.outVar$2.v$1);
+        this$8.java$lang$JSConsoleBasedPrintStream$$printString__T__V((x + "\n"))
+      }
+    })
+  })(this, xhr);
+  xhr.send()
+});
+var $d_Lru_spbau_mit_frontend_Comparer$$anonfun$1 = new $TypeData().initClass({
+  Lru_spbau_mit_frontend_Comparer$$anonfun$1: 0
+}, false, "ru.spbau.mit.frontend.Comparer$$anonfun$1", {
+  Lru_spbau_mit_frontend_Comparer$$anonfun$1: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lru_spbau_mit_frontend_Comparer$$anonfun$1.prototype.$classData = $d_Lru_spbau_mit_frontend_Comparer$$anonfun$1;
+/** @constructor */
 function $c_Lrx_Rx$Dynamic$$anonfun$2() {
   $c_sr_AbstractFunction1.call(this);
   this.$$outer$2 = null
@@ -14152,7 +14234,7 @@ $c_Lru_spbau_mit_frontend_Example$$anonfun$main$1.prototype.apply$mcV$sp__V = (f
   var navigationBar = new $c_Lcom_karasiq_bootstrap_navbar_NavigationBarBuilder().init___sc_Seq__T__Lscalatags_generic_Modifier__sc_Seq__F1__F1(tabs$1, barId$1, brand$1, styles$2, container$1, contentContainer$1).withContentContainer__F1__Lcom_karasiq_bootstrap_navbar_NavigationBarBuilder(new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(content$2) {
     var content = $as_Lscalatags_generic_Modifier(content$2);
     return $m_Lcom_karasiq_bootstrap_grid_GridSystem$().container__Lscalatags_JsDom$TypedTag().apply__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lscalatags_JsDom$all$().id__Lscalatags_generic_Attr().$$colon$eq__O__Lscalatags_generic_AttrValue__Lscalatags_generic_AttrPair("main-container", $m_Lscalatags_JsDom$all$().stringAttr$1), $m_Lcom_karasiq_bootstrap_grid_GridSystem$().mkRow__sc_Seq__Lscalatags_JsDom$TypedTag(new $c_sjs_js_WrappedArray().init___sjs_js_Array([content]))]))
-  }))).withStyles__sc_Seq__Lcom_karasiq_bootstrap_navbar_NavigationBarBuilder(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$().inverse__Lcom_karasiq_bootstrap_navbar_NavigationBarStyle(), $m_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$().fixedTop__Lcom_karasiq_bootstrap_navbar_NavigationBarStyle()])).build__Lrx_Ctx$Owner__Lcom_karasiq_bootstrap_navbar_NavigationBar($m_Lru_spbau_mit_frontend_Example$().ru$spbau$mit$frontend$Example$$context$1);
+  }))).withStyles__sc_Seq__Lcom_karasiq_bootstrap_navbar_NavigationBarBuilder(new $c_sjs_js_WrappedArray().init___sjs_js_Array([$m_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$().inverse__Lcom_karasiq_bootstrap_navbar_NavigationBarStyle(), $m_Lcom_karasiq_bootstrap_navbar_NavigationBarStyle$().staticTop__Lcom_karasiq_bootstrap_navbar_NavigationBarStyle()])).build__Lrx_Ctx$Owner__Lcom_karasiq_bootstrap_navbar_NavigationBar($m_Lru_spbau_mit_frontend_Example$().ru$spbau$mit$frontend$Example$$context$1);
   var md = $m_sci_Nil$();
   navigationBar.render__sc_Seq__Lscalatags_generic_Util$SeqNode(md).applyTo__O__V($m_Lorg_scalajs_dom_package$().document__Lorg_scalajs_dom_raw_HTMLDocument().body)
 });

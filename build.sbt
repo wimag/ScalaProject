@@ -5,8 +5,14 @@ lazy val commonSettings = Seq(
 )
 
 lazy val serverSettings = Seq(
-  libraryDependencies ++= Seq( jdbc , cache , ws   , specs2 % Test,
-    "org.sameersingh.scalaplot" % "scalaplot" % "0.0.4"),
+  libraryDependencies ++= Seq(
+    jdbc,
+    cache,
+    ws,
+    specs2 % Test,
+    "org.sameersingh.scalaplot" % "scalaplot" % "0.0.4",
+    filters
+  ),
   unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" ),
   resolvers += "scalaz-bintray" at "https://dl.bintray.com/scalaz/releases"
 )
@@ -15,15 +21,17 @@ lazy val frontendSettings = Seq(
   ivyConfigurations += config("js"),
   persistLauncher := true,
   skip in packageJSDependencies := false,
-  jsDependencies ++= Def.setting(Seq[org.scalajs.sbtplugin.JSModuleID](
+  jsDependencies ++= Seq(
     "org.webjars" % "jquery" % "2.1.3" / "2.1.3/jquery.js",
     "org.webjars.bower" % "paths-js" % "0.4.4" / "paths.js",
-    "org.webjars" % "bootstrap" % "3.3.7" / "bootstrap.js" dependsOn "2.1.3/jquery.js"
-  )).value,
-  jsDependencies += RuntimeDOM,
+    "org.webjars" % "bootstrap" % "3.3.7" / "bootstrap.js" dependsOn "2.1.3/jquery.js",
+    RuntimeDOM
+  ),
   libraryDependencies ++= Seq(
     "eu.unicredit" %%% "paths-scala-js" % "0.4.4",
-    "com.github.karasiq" %%% "scalajs-bootstrap" % "1.1.2"
+    "com.github.karasiq" %%% "scalajs-bootstrap" % "1.1.2",
+    "org.sameersingh.scalaplot" % "scalaplot" % "0.0.4",
+    filters
   )
 )
 
@@ -46,7 +54,8 @@ lazy val backendSettings = Seq(
     "org.apache.spark" %% "spark-core" % "2.0.1" % "provided",
     "org.apache.spark" %% "spark-streaming" % "2.0.1" % "provided",
     "org.apache.bahir" %% "spark-streaming-twitter" % "2.0.1",
-    "com.github.nscala-time" %% "nscala-time" % "2.14.0"
+    "com.github.nscala-time" %% "nscala-time" % "2.14.0",
+    filters
   )
 )
 

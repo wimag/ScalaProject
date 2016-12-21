@@ -1,5 +1,3 @@
-Fear and loathing in Academic University
-
 # Spark howto
 
 ## Export directory for properties file
@@ -34,6 +32,10 @@ Build js packages:
 ```
 sbt backend/run
 ```
+
+# Gnuplot
+
+You'll need to install gnuplot so everything can work
 
 # Display
 

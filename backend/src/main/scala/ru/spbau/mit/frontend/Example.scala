@@ -29,7 +29,7 @@ object Example extends JSApp {
           NavigationTab("Main", "table", "table".fontAwesome(FontAwesome.fixedWidth), new Comparer)
         )
         .withContentContainer(content ⇒ GridSystem.container(id := "main-container", GridSystem.mkRow(content)))
-        .withStyles(NavigationBarStyle.inverse, NavigationBarStyle.fixedTop)
+        .withStyles(NavigationBarStyle.inverse, NavigationBarStyle.staticTop)
         .build()
 
       // Render page

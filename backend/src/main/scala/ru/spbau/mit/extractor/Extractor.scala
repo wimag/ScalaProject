@@ -28,7 +28,7 @@ object Extractor {
     val topCounts = count(stream, util.getSeconds("twitter.tag.seconds"))
 
     // Output directory
-    val outputDir = util.conf.getProperty("output.dir", "E:\\Large stuff\\tweets\\data\\window")
+    val outputDir = util.conf.getProperty("output.dir", "D:\\Large stuff\\tweets\\data\\window")
 
     // Prints to the output directory
     def saveFrequencies(counts:DStream[(String, Int)]) =

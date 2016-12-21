@@ -69,6 +69,6 @@ class Util(val filename: String = "app.properties", val confDir: String = "SPARK
 }
 
 object Util {
-  System.setProperty("hadoop.home.dir", "c:\\winutils")
+  //System.setProperty("hadoop.home.dir", "c:\\winutils")
   val instance = new Util()
 }
