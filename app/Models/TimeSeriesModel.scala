@@ -11,7 +11,7 @@ import scala.reflect.io.{Directory, File}
 case class TimeSeriesPoint(time: DateTime, views: Int)
 
 object TimeSeriesModel {
-  private val dataFolder = Directory("D:\\Large stuff\\tweets\\data\\window")
+  private val dataFolder = Directory("/home/edgar/tweets/")
 
   private def getOccurrencesInFile(file: File, word: String): Int = {
     val bufferedSource = scala.io.Source.fromFile(file.path)
